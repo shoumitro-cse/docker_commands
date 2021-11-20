@@ -1,0 +1,5 @@
+django_postgis_nginx
+other
+django-on-docker/app/env/*
+__pycache__/*
+django-on-docker/app/hello_django/__pycache__/*

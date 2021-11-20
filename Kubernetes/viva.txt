@@ -1,0 +1,37 @@
+
+What is a Kubernetes cluster?
+A Kubernetes cluster is a set of nodes that run containerized applications. Containerizing applications packages an app with its dependences and some necessary services. ... Kubernetes clusters allow containers to run across multiple machines and environments: virtual, physical, cloud-based, and on-premises.
+
+What is a Node and a cluster?
+In Hadoop distributed system, Node is a single system which is responsible to store and process data. Whereas Cluster is a collection of multiple nodes which communicates with each other to perform set of operation. Or. Multiple nodes are configured to perform a set of operations we call it Cluster.
+
+Can Kubernetes run without Docker?
+Quite the contrary; Kubernetes can run without Docker and Docker can function without Kubernetes. Kubernetes can then allow you to automate container provisioning, networking, load-balancing, security and scaling across all these nodes from a single command line or dashboard
+
+
+What is Kubernetes and Docker?
+Docker is a platform and tool for building, distributing, and running Docker containers. Kubernetes is a container orchestration system for Docker containers that is more extensive than Docker Swarm and is meant to coordinate clusters of nodes at scale in production in an efficient manne.
+
+orchestration = সুসমন্বয়সাধন
+
+What is Pods?
+Pods are the smallest, most basic deployable objects in Kubernetes. A Pod represents a single instance of a running process in your cluster. Pods contain one or more containers, such as Docker containers. When a Pod runs multiple containers, the containers are managed as a single entity and share the Pod's resources.
+
+
+What is difference between POD and container?
+A container runs logically in a pod (though it also uses a container runtime); A group of pods, related or unrelated, run on a cluster. A pod is a unit of replication on a cluster; A cluster can contain many pods, related or unrelated [and] grouped under the tight logical borders called namespaces.
+
+
+What is node and pod in Kubernetes?
+A Pod always runs on a Node. A Node is a worker machine in Kubernetes and may be either a virtual or a physical machine, depending on the cluster. A Node can have multiple pods, and the Kubernetes control plane automatically handles scheduling the pods across the Nodes in the cluster.
+
+
+What is the difference between POD and Docker?
+A fundamental difference between Kubernetes and Docker is that Kubernetes is meant to run across a cluster while Docker runs on a single node. Kubernetes pods—scheduling units that can contain one or more containers in the Kubernetes ecosystem—are distributed among nodes to provide high availability.
+
+
+What is replica set in kubernetes?
+A ReplicaSet is a process that runs multiple instances of a Pod and keeps the specified number of Pods constant. Its purpose is to maintain the specified number of Pod instances running in a cluster at any given time to prevent users from losing access to their application when a Pod fails or is inaccessible.
+
+
+
