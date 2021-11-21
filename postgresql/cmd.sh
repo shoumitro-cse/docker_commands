@@ -2,8 +2,11 @@
 
 
 # make postgresql image
-docker run -p 5432:5432 -e POSTGRES_PASSWORD=123456 -d postgres
-
+#docker run -p 5432:5432 -e POSTGRES_PASSWORD=123456 -d postgres
+# Here, -p 5433:5432 => local port is 5433 and image port is 5432
+docker run -p 5433:5432 -e POSTGRES_PASSWORD=123456 -d postgres # work fine
+docker start 2ddd98e4b7a5 # start docker container
+psql -h localhost -p 5433 -U postgres # Enter this command local mechine pw: 123456
 
 # Enter docker container
 # docker exec -it <PSQL-Container-ID> bash
