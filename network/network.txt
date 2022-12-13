@@ -5,7 +5,8 @@ docker all network driver name;
 1. host
 2. bridge
 3. macvlan
-4. overlay
+4. ipvlan
+5. overlay
 
 
 here, wlp6s0 is a lan and docker0 is a virtual switch
@@ -78,10 +79,10 @@ root@c3cf952d6aab:/# hostname -I
 708596d5bad4aba4be11552c220b2fce03daf7c364b254b09310fbf75ec2bbae
 docker: Error response from daemon: no available IPv4 addresses on this network's address pools: my_custom_net2 (b861049168790e909a1c499985382bef87cbb31ca180f73abb93f255c3e35e1e).
 
-docker run -itd --ip 192.168.0.3 --name my_nginx5 --network my_custom_net2 nginx:latest
+docker run -itd --ip 192.168.0.202 --name my_nginx5 --network my_custom_net2 nginx:latest
 docker exec -it  my_nginx5 bash
 root@c3cf952d6aab:/# hostname -I
-192.168.0.3 
+192.168.0.202 
 
 
 docker stop my_nginx4 my_nginx5
