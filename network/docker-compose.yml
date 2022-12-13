@@ -1,0 +1,35 @@
+version: '3.9'
+
+
+networks:
+  network1:
+    name: my-network
+    attachable: true
+    ipam:
+      driver: default # default=bridge
+      config:
+        - subnet: 172.18.0.0/16
+          ip_range: 172.18.5.0/24
+          gateway: 172.18.0.1
+
+  network2:
+    name: my-network2
+    attachable: true
+    ipam:
+      driver: macvlan
+      config:
+        - subnet: 192.168.0.0/24
+          ip_range: 192.168.0.253/32
+          gateway: 192.168.0.1
+
+services:
+  postgres:
+    image: postgres:14.1-bullseye
+    environment:
+      POSTGRES_PASSWORD: ****
+    ports:
+      - "5433:5432"
+    networks:
+      - network1
+    #extra_hosts: # no needed
+    #  - "host.docker.internal:host-gateway"
