@@ -1,5 +1,8 @@
 # https://testdriven.io/blog/dockerizing-django-with-postgres-gunicorn-and-nginx/
 
+# build
+docker build -t my_app --network=host .
+
 mkdir django-on-docker && cd django-on-docker
 mkdir app && cd app
 python3.9 -m venv env

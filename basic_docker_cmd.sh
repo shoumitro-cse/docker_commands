@@ -16,6 +16,7 @@ newgrp docker
 
 # docker app build & run
 sudo docker build -t docker_ex .
+docker build -t my_app --network=host .
 sudo docker run  docker_ex 
 
 # simple image run using bash, here, python is image

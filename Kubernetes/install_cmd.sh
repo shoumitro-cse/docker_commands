@@ -34,6 +34,7 @@ sudo systemctl enable kubelet
 sudo kubeadm init --pod-network-cidr=192.168.0.0/16 --control-plane-endpoint <k8s>:6443 --upload-certs
 sudo kubeadm init --pod-network-cidr=192.168.0.0/16 --control-plane-endpoint "127.0.0.1:8000"
 
+deb https://apt.kubernetes.io/ kubernetes-xenial main
 
 
 

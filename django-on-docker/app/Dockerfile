@@ -1,8 +1,8 @@
 # pull official base image
-FROM python:3.9.6-alpine
+FROM python:3.6
 
 # set work directory
-WORKDIR /home/shoumitro/Documents/html_ex/docker_ex/django-on-docker/app/
+WORKDIR my_app/
 
 # set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -16,8 +16,9 @@ RUN pip install -r requirements.txt
 # copy project
 COPY . .
 
-
-RUN adduser -D my_user
+RUN adduser my_user
 USER my_user
 
+
 # CMD ["python", "manage.py", "runserver", "127.0.0.1:8000"]
+# ENTRYPOINT ["python", "manage.py", "runserver", "0.0.0.0:7000"]

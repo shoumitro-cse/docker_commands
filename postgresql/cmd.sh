@@ -3,7 +3,7 @@
 
 # make postgresql image
 #docker run -p 5432:5432 -e POSTGRES_PASSWORD=123456 -d postgres
-# Here, -p 5433:5432 => local port is 5433 and image port is 5432
+# Here, -p 5433:5432 => local port is 5433 and inside image or container port is 5432
 docker run -p 5433:5432 -e POSTGRES_PASSWORD=123456 -d postgres # work fine
 docker start 2ddd98e4b7a5 # start docker container
 psql -h localhost -p 5433 -U postgres # Enter this command local mechine pw: 123456
@@ -66,4 +66,15 @@ psql -h localhost -d postgres -U postgres
 psql -h 0.0.0.0 -p 5432 -U postgres
 
 
+# qtecba project
+
+# postgris and postgress
+docker run -d --name postgis_postgres -e POSTGRES_PASSWORD=123456 -e POSTGRES_USER=postgres  -v /home/my_pc/Documents/postgres/db-data/:/var/lib/postgresql/data  -p 5430:5432  kartoza/postgis:9.6-2.4
+
+psql -h localhost -p 5430 -U postgres
+
+
+# postgres only
+docker run -p 5433:5432 -e POSTGRES_PASSWORD=123456 -d postgres
+psql -h localhost -p 5433 -U postgres
 
