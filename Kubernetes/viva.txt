@@ -1,3 +1,19 @@
+Difference between docker and containerd?
+Docker is another popular container runtime that uses containerd as an internal runtime. But, the Docker container is easier to manage and run the same tasks as the containerd to get better and more efficient results. Docker has made it easier for developers to create, run, test, and deploy applications
+
+
+1. Does containerd replace Docker?
+It might not be possible as containerd cannot suffice your requirements to build images that you can do with Docker. If you want to use containerd, you still have to use Docker for some tasks, which is impossible with containerd. 
+
+2. Is containerd required for Docker?
+Docker uses containerd as its runtime, so it is required for Docker. 
+
+3. Is Kubernetes dropping Docker?
+Kubernetes can efficiently and quickly work with any container runtimes with a standard known as the Container Runtime Interface (CRI). It ensures standard communication between Kubernetes and the container runtime. 
+
+But, Docker did not implement the CRI. earlier due to the shortage of genuine options Kubenernetes was using Docker. But, as the number of runtime options is increasing in implementing the CRI, Kubernetes is dropping support for Docker. 
+
+
 What is kubernetes?
 Kubernetes, also known as K8s, is an open-source system for automating deployment, scaling, and management of containerized applications.
 
