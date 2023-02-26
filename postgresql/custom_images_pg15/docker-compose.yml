@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  pg_database:
+    container_name: postgres_custom_db
+    build:
+      context: .
+      dockerfile: Dockerfile
+    #command:  bash -c 'chmod +x ./server_config/setup.sh && ./server_config/setup.sh'
+    ports:
+      - 5438:5432
+    volumes:
+      - .:/postgresql_data
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+
+    
+    
